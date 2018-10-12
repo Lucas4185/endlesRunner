@@ -8,6 +8,7 @@ public class HighScore : MonoBehaviour {
 
     private int now = 3;
     private int score = 0;
+    private int highScore;
     public Text scoreLabel;
     private bool hit = false;
     private GameObject player;
@@ -22,6 +23,11 @@ public class HighScore : MonoBehaviour {
     {
 
         InvokeRepeating("AdToScore", 1, 1);
+        if(score > PlayerPrefs.GetInt("Highscore", 0))
+        {
+            PlayerPrefs.SetInt("Highscore", score);
+        }
+        
     }
 
     void AdToScore()
@@ -29,7 +35,7 @@ public class HighScore : MonoBehaviour {
         if (now > 0)
         {
             score = score + 1;
-            scoreLabel.text = "High Score: " + score.ToString();
+            scoreLabel.text = "Score: " + score.ToString();
         }
     }
 }

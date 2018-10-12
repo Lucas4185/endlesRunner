@@ -244,8 +244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.47855556}
   m_AnchorMax: {x: 0.5, y: 0.47855556}
-  m_AnchoredPosition: {x: 819, y: 419}
-  m_SizeDelta: {x: 161, y: 30}
+  m_AnchoredPosition: {x: 725, y: 419}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118379689
 MonoBehaviour:
@@ -267,7 +267,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 12be008bbd89a8c49a229341f027154e, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1683,6 +1683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hit: 0
   scoreLabel: {fileID: 118379689}
+  gateType: 1
 --- !u!1 &1507301501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,7 +1979,6 @@ MonoBehaviour:
   wallPrefab: []
   hookAble: []
   drone: []
-  spawnThreshold: 1
   prefab: {fileID: 1840224720}
   hookAblePrefab: {fileID: 72633413}
   dronePrefab: {fileID: 1814392681}
@@ -2085,6 +2085,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1990440010983140, guid: 5eb8edabc94ece848bea35b8d54bbdbe,
     type: 2}
   m_PrefabInternal: {fileID: 758384179}
+--- !u!114 &1811207781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1811207780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003ab1b521fa3684cbdb495d07d0259b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hit: 0
+  scoreLabel: {fileID: 0}
+  gateType: 0
 --- !u!4 &1811207787 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4484847334859470, guid: 5eb8edabc94ece848bea35b8d54bbdbe,
@@ -2219,6 +2233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hit: 0
   scoreLabel: {fileID: 118379689}
+  gateType: 1
 --- !u!1 &1820886384
 GameObject:
   m_ObjectHideFlags: 0

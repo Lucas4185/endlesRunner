@@ -10,7 +10,9 @@ public class ObjSpawnScript : MonoBehaviour {
     public GameObject[] wallPrefab;
     public GameObject[] hookAble;
     public GameObject[] drone;
-    public float spawnThreshold = 1f;
+
+    public const float spawnThreshold = 1f;
+
     private int RocketTime = 0;
     private int spawnInt;
     private int spawnerPositionMin = 500;
@@ -62,8 +64,9 @@ public class ObjSpawnScript : MonoBehaviour {
             //{
                 //GameObject obj = myList[100];
                 //Vector3 spawnPosition = new Vector3(Random.Range(80, 180), 0, Random.Range(spawnerPositionMin, spawnerPositionMax));
-                //myList.Add((GameObject)Instantiate(prefab, spawnPosition, Quaternion.identity));
+                //myList.Add((GameObject)Instantiate(hookAblePrefab, spawnPosition, Quaternion.identity));
                 //spawnTimer = 0;
+                
             //}
 
             //spawned de kleine muren
@@ -77,7 +80,7 @@ public class ObjSpawnScript : MonoBehaviour {
             }
 
             //spawned de rode blokken in de lucht
-            hookAble = new GameObject[5];
+            hookAble = new GameObject[3];
             for (int i = 0; i < hookAble.Length; i++)
             {
                 Vector3 spawnPosition = new Vector3(Random.Range(100, 160), 30, Random.Range(spawnerPositionMin, spawnerPositionMax));
@@ -90,7 +93,7 @@ public class ObjSpawnScript : MonoBehaviour {
             drone = new GameObject[2];
             for (int i = 0; i < drone.Length; i++)
             {
-                Vector3 spawnPosition = new Vector3(Random.Range(80, 180), 15, Random.Range(spawnerPositionMin, spawnerPositionMax));
+                Vector3 spawnPosition = new Vector3(Random.Range(100, 160), 15, Random.Range(spawnerPositionMin, spawnerPositionMax));
                 GameObject droneClone = (GameObject)Instantiate(dronePrefab, spawnPosition, Quaternion.identity);
                 spawnTimer = 0;
                 drone[i] = droneClone;
